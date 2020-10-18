@@ -11,7 +11,7 @@ import java.util.concurrent.Future;
  */
 public class Test {
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        ExecutorService executorService = Executors.newCachedThreadPool();
         for(int i = 0;i<20;i++){
             Future<String> submit = executorService.submit(new Task(i));
             try {

@@ -23,7 +23,7 @@ select initcap(ename) from emp;
 select upper(ename) from emp;
 --将字符串全部转换为小写
 select lower(ename) from emp;
---填充字符串
+--填充字符串，如果值的长度没有10就用*填充到左边或者右边
 select lpad(ename,10,'*') from emp;
 select rpad(ename,10,'*') from emp;
 --去除空格

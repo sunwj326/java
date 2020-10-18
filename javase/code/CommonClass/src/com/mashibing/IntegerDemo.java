@@ -34,15 +34,15 @@ public class IntegerDemo {
 //        System.out.println(i1==i2);
 //        System.out.println(i3==i4);
 
-//        Double d1 = 1.0;
-//        Double d2 = 1.0;
-//        Double d3 = 2.0;
-//        Double d4 = 2.0;
-//        System.out.println(d1==d2);
-//        System.out.println(d3==d4);
+        Double d1 = 1.0;
+        Double d2 = 1.0;
+        Double d3 = 2.0;
+        Double d4 = 2.0;
+        System.out.println(d1==d2);
+        System.out.println(d3==d4);
 
-        Integer i = 10;
-        int a = i;
-        System.out.println(a==i);
+//        Integer i = 10;
+//        int a = i;
+//        System.out.println(a==i);
     }
 }

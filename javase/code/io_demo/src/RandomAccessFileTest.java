@@ -21,6 +21,8 @@ public class RandomAccessFileTest {
         int blockSize = 1024;
         //文件可以被切分成多少个块
         int size = (int)Math.ceil(length*1.0/blockSize);
+//        System.out.println(length*1.0/blockSize);
+//        System.out.println(Math.ceil(length*1.0/blockSize));
         System.out.printf("要被切成《%d》个块",size);
 
         int beginPos = 0;

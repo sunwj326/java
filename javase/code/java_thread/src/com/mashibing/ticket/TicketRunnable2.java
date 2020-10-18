@@ -19,10 +19,11 @@ public class TicketRunnable2 implements Runnable {
     public void run() {
         for (int i = 0; i < 100; i++) {
             try {
-                Thread.sleep(200);
+                Thread.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
             synchronized (this){
                 if (ticket > 0) {
                     System.out.println(Thread.currentThread().getName() + "正在出售第" + (ticket--) + "张票");

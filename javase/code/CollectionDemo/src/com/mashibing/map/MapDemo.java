@@ -10,7 +10,7 @@ import java.util.*;
 /**
  * map存储的是k-v键值对映射的数据
  *      实现子类：
- *          HashMap：数据+链表（1.7） 数组+链表+红黑树（1.8）
+ *          HashMap：数组+链表（1.7） 数组+链表+红黑树（1.8）
  *          LinkedHashMap：链表
  *          TreeMap:红黑树
  *

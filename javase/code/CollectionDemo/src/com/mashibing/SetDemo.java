@@ -40,25 +40,25 @@ public class SetDemo implements Comparator<Person> {
 //            System.out.println(iter.next());
 //        }
 
-//        TreeSet treeSet = new TreeSet();
-//        treeSet.add(34);
-//        treeSet.add(1);
-//        treeSet.add(65);
-//        System.out.println(treeSet.ceiling(1));
-//        System.out.println(treeSet);
-//        HashSet hashSet = new HashSet();
-//        hashSet.add(new Person("zhangsan",12));
-//        hashSet.add(new Person("zhangsan",12));
-//        hashSet.add(new Person("lisi",13));
-//        System.out.println(hashSet);
-
-        TreeSet treeSet = new TreeSet(new SetDemo());
-        treeSet.add(new Person("lisi",15));
-        treeSet.add(new Person("wangwu",13));
-        treeSet.add(new Person("maliu",12));
-        treeSet.add(new Person("zhangsan",19));
-        treeSet.add(new Person("zhangsan",12));
+        TreeSet treeSet = new TreeSet();
+        treeSet.add(34);
+        treeSet.add(1);
+        treeSet.add(65);
+        System.out.println(treeSet.ceiling(1));
         System.out.println(treeSet);
+        HashSet hashSet = new HashSet();
+        hashSet.add(new Person("zhangsan",12));// TreeSet比较时需要实现Compareable方法
+        hashSet.add(new Person("zhangsan",12));
+        hashSet.add(new Person("lisi",13));
+        System.out.println(hashSet);
+
+//        TreeSet treeSet = new TreeSet(new SetDemo());
+//        treeSet.add(new Person("lisi",15));
+//        treeSet.add(new Person("wangwu",13));
+//        treeSet.add(new Person("maliu",12));
+//        treeSet.add(new Person("zhangsan",19));
+//        treeSet.add(new Person("zhangsan",12));
+//        System.out.println(treeSet);
 
 
     }

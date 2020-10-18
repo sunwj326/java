@@ -23,8 +23,11 @@ throws:声明异常
 public class Excepton2 {
     public static void main(String[] args) {
         try {
+//            showException();
             show();
         } catch (GenderException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -41,6 +44,23 @@ public class Excepton2 {
         }else{
 //            throw new Exception("性别出现错误");
             throw new GenderException("gender is wrong");
+        }
+    }
+
+
+    public static void showException() {
+        try {
+            String gender = "1234";
+            if (gender.equals("man")) {
+                System.out.println("man");
+            } else if (gender.equals("woman")) {
+                System.out.println("woman");
+            } else {
+//            throw new Exception("性别出现错误");
+                throw new Exception("gender is wrong");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 

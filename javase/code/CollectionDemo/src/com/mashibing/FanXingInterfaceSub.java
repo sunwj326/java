@@ -9,11 +9,11 @@ public  class   FanXingInterfaceSub implements FanXingInterface<String> {
 
     @Override
     public String test() {
-        return null;
+        return new String();
     }
 
     @Override
     public void test2(String string) {
-
+        System.out.println(string);
     }
 }

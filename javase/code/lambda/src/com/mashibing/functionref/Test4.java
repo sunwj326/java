@@ -10,8 +10,8 @@ import java.util.function.Consumer;
  */
 public class Test4 {
     public static void main(String[] args) {
-        Consumer<Too> c1 = (Too too)->new Too().foo();
-        c1.accept(new Too());
+//        Consumer<Too> c1 = (Too too)->new Too().foo();
+//        c1.accept(new Too());
 //        Consumer<Too> c2 = (Too too) ->new Too2().show();
 //        c2.accept(new Too());
         Consumer<Too> c3 = Too::foo;

@@ -49,6 +49,7 @@ public class FileDemo {
 
         //判断文件是否是文件或者目录
         System.out.println(file2.isDirectory());
+        //是文件并且存在返回true
         System.out.println(file2.isFile());
 
 //        String[] list = file2.list();
@@ -70,7 +71,7 @@ public class FileDemo {
         //创建单级目录
         file2.mkdir();
         //创建多级目录
-        file2.mkdirs();
+//        file2.mkdirs();
 
         //循环遍历输出C盘中的所有文件的绝对路径
         //使用递归的方式

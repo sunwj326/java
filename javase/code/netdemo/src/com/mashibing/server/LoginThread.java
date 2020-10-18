@@ -28,7 +28,7 @@ public class LoginThread  implements Runnable{
             User user = (User) objectInputStream.readObject();
             String str = "";
             if("msb".equals(user.getUsername()) && "msb".equals(user.getPassword())){
-                System.out.println("欢迎你："+user.getUsername());
+                System.out.println(Thread.currentThread().getName() + "欢迎你："+user.getUsername());
                 str = "登录成功";
             }else{
                 str="登录失败";

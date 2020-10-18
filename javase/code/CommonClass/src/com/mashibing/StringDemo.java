@@ -20,40 +20,49 @@ package com.mashibing;
 * */
 public class StringDemo {
     public static void main(String[] args) {
-        String str = "abc";
-        String str2 = new String("abc");
+//        String str = "abc";
+//        String str2 = new String("abc");
 //        str2 = str2.intern();
-        System.out.println(str==str2);
-        System.out.println(str.equals(str2));
-        System.out.println(str.charAt(0));
+//        System.out.println(str==str2);
+//        System.out.println(str.equals(str2));
+//        System.out.println(str.charAt(0));
         //数组的复制过程
-        System.out.println(str.concat("cde"));
+//        System.out.println(str.concat("cde"));
         //返回指定下标的元素
-        System.out.println(str.indexOf("a"));
-        String s = "abcdefghijklmn";
-        System.out.println(s.substring(3));
+//        System.out.println(str.indexOf("a"));
+//        String s = "abcdefghijklmn";
+//        System.out.println(s.substring(3));
         //在截取字符串的时候，需要注意是左闭右开区间
-        System.out.println(s.substring(3,5));
-        System.out.println(s.length());
-        System.out.println("-----------------");
+//        System.out.println(s.substring(3,5));
+//        System.out.println(s.length());
+//        System.out.println("-----------------");
 //        String a = "abc";
 //        String b = new String("abc");
 //        b = b.intern();
 //        System.out.println(a==b);
 
-        String a = "abc";
-        String b = "def";
-        String c = "abcdef";
-        String d = (a+b).intern();
-        String e = "abc"+"def";
-        System.out.println(c==d);
-        System.out.println(c==e);
+//        String a = "abc";
+//        String b = "def";
+//        String c = "abcdef";
+//        String d = (a+b).intern();
+//        System.out.println(c==d);
+//        String e = "abc"+"def";
+//        System.out.println(c==d);
+//        System.out.println(c==e);
         String f = "a" + "b" +"c";
         String a1 = "a";
         String a2 = "b";
         String a3 = "c";
         String f1 = a1+a2+a3;
+        System.out.println(f==f1);
 
-
+//        String s1="abc";
+//        String s2="abc";
+//        System.out.println(s1==s2);//true
+//        String s3=new String("ab")+new String("c");
+//
+//        // 这里显示false，可能先在字符串常量池中添加s1，然后动态的添加s3，会显示false
+//        s3.intern();
+//        System.out.println(s1==s3); //false
     }
 }

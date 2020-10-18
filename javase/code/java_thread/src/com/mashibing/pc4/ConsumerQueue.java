@@ -20,7 +20,7 @@ public class ConsumerQueue implements Runnable {
             try {
                 Goods goods = blockingQueue.take();
                 System.out.println("消费者消费的商品是："+goods.getBrand()+"--"+goods.getName());
-                Thread.sleep(200);
+//                Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

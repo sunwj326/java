@@ -11,13 +11,15 @@ public class BufferedInputStreamDemo {
 
         File file = new File("abc.txt");
         FileInputStream fileInputStream = null;
-        BufferedInputStream bufferedInputStream = null;
+//        BufferedInputStream bufferedInputStream = null;
+        BufferedReader bufferedReader = null;
         try {
              fileInputStream = new FileInputStream(file);
-             bufferedInputStream = new BufferedInputStream(fileInputStream);
+//             bufferedInputStream = new BufferedInputStream(fileInputStream);
+             bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
             int read = 0;
-            while((read = bufferedInputStream.read())!=-1){
-                bufferedInputStream.skip(10);
+            while((read = bufferedReader.read())!=-1){
+//                bufferedReader.skip(2);
                 System.out.print((char)read);
             }
                     ;
@@ -26,11 +28,11 @@ public class BufferedInputStreamDemo {
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
-            try {
-                bufferedInputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                bufferedInputStream.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
             try {
                 fileInputStream.close();
             } catch (IOException e) {

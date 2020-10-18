@@ -50,12 +50,12 @@ public class CollectionDemo {
         collection1.add("d");
         collection.addAll(collection1);
         System.out.println(collection);
-//        collection.clear();
+        collection.clear();
 //        System.out.println(collection);
         System.out.println(collection.contains("a"));
         System.out.println(collection.containsAll(collection1));
         System.out.println(collection.isEmpty());
-//        collection.remove("a");
+        collection.remove("a");
 //        System.out.println(collection);
         System.out.println(collection1.retainAll(collection));
         Object[] objects = collection.toArray();
