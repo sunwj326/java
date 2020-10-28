@@ -6,7 +6,7 @@ public class DBUtil {
 
     public static final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
     public static final String USERNAME = "scott";
-    public static final String PASSWORD = "tiger";
+    public static final String PASSWORD = "justdoit";
 
     static {
         try {

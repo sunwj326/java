@@ -1,4 +1,4 @@
-#JDBC具备自己的规范，在JDBC4之前是必须要填写驱动名称的，但是之后版本不需要填写
+#JDBC具备自己的规范，在JDBC4之前是必须要填写驱动名称的，但是之后版本不需要填写,所以即使名称错误依然可以工作
 c3p0.driverClass=com.mysql.jdbc.Driver
 c3p0.jdbcUrl=jdbc:mysql://localhost:3306/demo
 c3p0.user=root

@@ -197,7 +197,7 @@ explain select * from emp order by sal;
 --using temporary:建立临时表来保存中间结果，查询完成之后把临时表删除
 explain select ename,count(*) from emp where deptno = 10 group by ename;
 
---using index:这个表示当前的查询时覆盖索引的，直接从索引中读取数据，而不用访问数据表。如果同时出现using where 表名索引被用来执行索引键值的查找，如果没有，表面索引被用来读取数据，而不是真的查找
+--using index:这个表示当前的查询时覆盖索引的，直接从索引中读取数据，而不用访问数据表。如果同时出现using where 表明索引被用来执行索引键值的查找，如果没有，表面索引被用来读取数据，而不是真的查找
 explain select deptno,count(*) from emp group by deptno limit 10;
 
 --using where:使用where进行条件过滤

@@ -32,14 +32,14 @@ commit;
 read uncommitted; 	--读未提交
 read commited;		--读已提交
 repeatable read;	--可重复读
-(seariable)			--序列化执行，串行执行
+serializable;		--序列化执行，串行执行
 --产生数据不一致的情况：
 脏读
 不可重复读
 幻读
 ```
 
-| 隔离级别 | 异常情况 |            | 异常情况 |
+| 隔离级别 | 异常情况 | 异常情况   | 异常情况 |
 | -------- | -------- | ---------- | -------- |
 | 读未提交 | 脏读     | 不可重复读 | 幻读     |
 | 读已提交 |          | 不可重复读 | 幻读     |
@@ -63,7 +63,7 @@ A:commit;
 B:select * from psn; --读取的数据是msb,因为A事务已经commit，数据永久的被修改
 ```
 
-5、测试2：当使用read committed的时候，就不会出现脏读的情况了，当时会出现不可重复读的问题
+5、测试2：当使用read committed的时候，就不会出现脏读的情况了，但是会出现不可重复读的问题
 
 ```sql
 set session transaction isolation level read committed;

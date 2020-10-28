@@ -60,6 +60,12 @@ INSERT INTO `mylock` (`id`, `NAME`) VALUES ('4', 'd');
 
 **MyISAM的并发插入问题**
 
+- AUTO by default, the variable is set to `AUTO` (or 1) and concurrent inserts are handled as just described. 如果表中没有被删除的行（空洞），MyISAM允许一个进程读表的同时，另一个进程从表尾写入记录
+
+- NEVER  concurrent inserts are disabled. 不允许并发写入
+
+- ALWAYS concurrent inserts at the end of the table are permitted even for tables that have deleted rows，无论有没有空洞，都允许在表尾并发写入记录
+
 MyISAM表的读和写是串行的，这是就总体而言的，在一定条件下，MyISAM也支持查询和插入操作的并发执行
 
 |                           session1                           |                           session2                           |
@@ -135,7 +141,7 @@ mysql> show status like 'innodb_row_lock%';
 **3、InnoDB的行锁模式及加锁方法**
 
 ​		**共享锁（s）**：又称读锁。允许一个事务去读一行，阻止其他事务获得相同数据集的排他锁。若事务T对数据对象A加上S锁，则事务T可以读A但不能修改A，其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S锁。这保证了其他事务可以读A，但在T释放A上的S锁之前不能对A做任何修改。
-​		**排他锁（x）**：又称写锁。允许获取排他锁的事务更新数据，阻止其他事务取得相同的数据集共享读锁和排他写锁。若事务T对数据对象A加上X锁，事务T可以读A也可以修改A，其他事务不能再对A加任何锁，直到T释放A上的锁。
+​		**排他锁（x）**：又称写锁。允许获取排他锁的事务更新数据，阻止其他事务取得相同 的数据集共享读锁和排他写锁。若事务T对数据对象A加上X锁，事务T可以读A也可以修改A，其他事务不能再对A加任何锁，直到T释放A上的锁。
 
 ​		mysql InnoDB引擎默认的修改数据语句：**update,delete,insert都会自动给涉及到的数据加上排他锁，select语句默认不会加任何锁类型**，如果加排他锁可以使用select …for update语句，加共享锁可以使用select … lock in share mode语句。**所以加过排他锁的数据行在其他事务种是不能修改数据的，也不能通过for update和lock in share mode锁的方式查询数据，但可以直接通过select …from…查询数据，因为普通查询没有任何锁机制。** 
 

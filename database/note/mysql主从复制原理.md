@@ -37,7 +37,7 @@
 4--Mysql复制最好确保master和slave服务器上的Mysql版本相同（如果不能满足版本一致，那么要保证master主节点的版本低于slave从节点的版本）
 5--master和slave两节点间时间需同步
 
-![](e:\lian\oracle\mysql\主从原理.png)
+![](..\image\mysql\主从原理.png)
 
 ##### 具体步骤：
 
@@ -57,23 +57,23 @@
 
 ##### （一）一主一从
 
-![1570714549624](e:\lian\oracle\typora-user-images\1570714549624.png)
+![1570714549624](..\image\typora-user-images\1570714549624.png)
 
 ##### （二）主主复制
 
-![1570714565647](e:\lian\oracle\typora-user-images\1570714565647.png)
+![1570714565647](..\image\typora-user-images\1570714565647.png)
 
 ##### （三）一主多从
 
-![1570714576819](e:\lian\oracle\typora-user-images\1570714576819.png)
+![1570714576819](..\image\typora-user-images\1570714576819.png)
 
 ##### （四）多主一从
 
-![1570714615915](e:\lian\oracle\typora-user-images\1570714615915.png)
+![1570714615915](..\image\typora-user-images\1570714615915.png)
 
 ##### （五）联级复制
 
-![1570714660961](e:\lian\oracle\typora-user-images\1570714660961.png)
+![1570714660961](..\image\typora-user-images\1570714660961.png)
 
 ### 4、mysql主从同步延时分析
 

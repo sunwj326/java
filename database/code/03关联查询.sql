@@ -135,11 +135,13 @@ select t.deptno, avg(t.grade)
  group by t.deptno;
 --限制输出，limit，mysql中用来做限制输出的，但是oracle中不是
 --再oracle中，如果需要使用限制输出和分页的功能的话，必须要使用rownum，
---但是rownum不能直接使用，需要嵌套使用
+--但是rownum不能直接使用，需要嵌套使用 ？？？？
 --4、求薪水最高的前5名雇员
 select *
   from (select * from emp e order by e.sal desc) t1
  where rownum <= 5
+ --- rownum不是不能直接使用，其实是不能和 * 一起使用，至少要加表别名.*
+ select  rownum, e.* from emp e where rownum <=5 order by e.sal desc 
   
  select * from emp e  where rownum <=5 order by e.sal desc
 --5、求薪水最高的第6到10名雇员
