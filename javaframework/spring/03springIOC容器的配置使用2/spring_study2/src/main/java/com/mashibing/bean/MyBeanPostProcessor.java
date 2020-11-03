@@ -12,6 +12,9 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
      * @throws BeansException
      */
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+//        if( bean instanceof  Person){
+//            do something
+//        }
         System.out.println("postProcessBeforeInitialization:"+beanName);
         return bean;
     }

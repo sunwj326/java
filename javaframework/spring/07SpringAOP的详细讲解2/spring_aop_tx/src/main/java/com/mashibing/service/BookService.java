@@ -24,11 +24,11 @@ public class BookService {
     *
     * 设置哪些异常不会回滚数据
     * noRollBackfor: noRollbackFor = {ArithmeticException.class}
-    * noRollbackForClassName:
+    * noRollbackForClassName: {"java.lang.ArithmeticException"}
     *
     * 设置哪些异常回滚
-    * rollBackfor:
-    * rollbackForClassName
+    * rollBackfor: {FileNotFoundException.class}
+    * rollbackForClassName: {"java.io.FileNotFoundException"}
     * */
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public void buyBook() throws FileNotFoundException {
