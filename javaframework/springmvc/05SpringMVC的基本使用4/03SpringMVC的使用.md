@@ -901,7 +901,7 @@ success
 
 ​		通过运行结果能够发现拦截器的执行顺序如下：
 
-![](E:\lian\springmvc\image\拦截器执行结果.png)
+![](image\拦截器执行结果.png)
 
 ​		可以看到先执行拦截器的preHandle方法----》执行目标方法----》执行拦截器的postHandle方法----》执行页面跳转----》执行拦截器的afterCompletion方法
 
@@ -946,7 +946,7 @@ public class MySecondInterceptor implements HandlerInterceptor {
 
 看到如下执行顺序：
 
-![image-20200313182213954](E:\lian\springmvc\image\多个拦截器执行顺序.png)
+![image-20200313182213954](image\多个拦截器执行顺序.png)
 
 调整两个拦截器的配置顺序：
 

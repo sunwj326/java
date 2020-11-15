@@ -62,6 +62,9 @@ public class UserController {
 //        model.addAttribute("user",user);
 //    }
 
+    /**
+     * ModelAttribute除了可以使用设置值到model中之外，还可以利用返回值
+     */
     @ModelAttribute("user2")
     public User testModelAttribute3(){
         System.out.println("testModelAttribute3---------------+");
